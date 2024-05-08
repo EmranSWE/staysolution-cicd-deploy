@@ -24,7 +24,7 @@ app.use('/api/v1', router)
 //Error
 
 app.get('/', async (req: Request, res: Response, next: NextFunction) => {
-  res.send('Server is running perfectly!!!!!!')
+  res.send('Server is running perfectly!!!!!!Yay, Hosted AWS cloud🚀🚀🚀')
 })
 
 //global error handler
