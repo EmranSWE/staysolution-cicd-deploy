@@ -18,3 +18,5 @@ jobs:
     - name: Build Docker Image
       run: docker build . --file Dockerfile --tag ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest
 
+    - name: Push Docker Image
+      run: docker push ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest
