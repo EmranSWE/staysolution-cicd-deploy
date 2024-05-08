@@ -33,7 +33,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     errorMessages: [
       {
         path: req.originalUrl,
-        message: 'Something added| Please update cicd 🚀🚀🚀',
+        message: 'Something added| Please update cicd | Try it🚀🚀🚀',
       },
     ],
   })
