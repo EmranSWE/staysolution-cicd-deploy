@@ -21,11 +21,6 @@ app.use(cookieParser())
 //Application use
 app.use('/api/v1', router)
 
-//Error
-
-app.get('/', async (req: Request, res: Response, next: NextFunction) => {
-  res.send('Server is running perfectly!!!!!!Yay, Hosted AWS cloud🚀🚀🚀')
-})
 
 //global error handler
 app.use(globalErrorHandler)
@@ -38,7 +33,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     errorMessages: [
       {
         path: req.originalUrl,
-        message: 'API Not Found',
+        message: 'API Not Found / Please check again!',
       },
     ],
   })
