@@ -23,4 +23,4 @@ jobs:
       run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest
 
     - name: Run the image
-      run: docker compose up -d
+      run: docker run -d -p 5000:5000 ${{ secrets.DOCKERHUB_USERNAME }}/staysolution-cicd-deploy:latest
