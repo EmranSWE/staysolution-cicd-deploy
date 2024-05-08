@@ -33,7 +33,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     errorMessages: [
       {
         path: req.originalUrl,
-        message: 'My name is MD EMRAN| Please update cicd | Try it🚀🚀🚀',
+        message: 'Final Testing By CICD EC2',
       },
     ],
   })
