@@ -1,3 +1,30 @@
+# name: Deploy Docker image to AWS
+
+# on:
+#   workflow_run:
+#     workflows: ["Publish Docker Image"]
+#     types: [completed]
+  
+# jobs:
+#   build:
+#     runs-on: self-hosted
+
+#     steps:
+#     - name: Stop the old container
+#       run: docker stop staysolution-cicd-deploy || true
+    
+#     - name: Delete the old container
+#       run: docker rm staysolution-cicd-deploy || true
+    
+#     - name: Delete the old image
+#       run: docker rmi ${{secrets.DOCKERHUB_USERNAMEE}}/staysolution-cicd-deploy:latest || true
+
+#     - name: Pull the image from dockerhub
+#       run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest
+
+#     - name: Run the image
+#       run: docker run -d -p 5000:5000 ${{ secrets.DOCKERHUB_USERNAME }}/staysolution-cicd-deploy:latest
+
 name: Deploy Docker image to AWS
 
 on:
@@ -23,4 +50,4 @@ jobs:
       run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest
 
     - name: Run the image
-      run: docker run -d -p 5000:5000 ${{ secrets.DOCKERHUB_USERNAME }}/staysolution-cicd-deploy:latest
+      run: docker compose up -d
