@@ -17,7 +17,7 @@
 #       run: docker rm staysolution-cicd-deploy || true
     
 #     - name: Delete the old image
-#       run: docker rmi ${{secrets.DOCKERHUB_USERNAMEE}}/staysolution-cicd-deploy:latest || true
+#       run: docker rmi ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest || true
 
 #     - name: Pull the image from dockerhub
 #       run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/staysolution-cicd-deploy:latest
